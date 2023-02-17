@@ -10,7 +10,7 @@ const ProductPages = function (id) {
             .then((data) => {
                 setBook(data)
             })
-    })
+    },[])
 
     return `<div class="content">
         <div class="content_menu">
@@ -77,9 +77,9 @@ const ProductPages = function (id) {
                 <div class="main_address_left_img">
                     <div class="main_address_left_img_file">
                    <div class = "ima">
-                   ${books.images.map(function(item){
-                     return`<img src="${item.large_url}" alt="">`
-                   })}
+                   ${books.images?.map(function (item) {
+                        return `<img src="${item.large_url}" alt="">`
+                    })}
                    
                    </div>
                     </div>
